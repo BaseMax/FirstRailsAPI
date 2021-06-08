@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Workerman\\' => array($vendorDir . '/workerman/workerman'),
+    'Medoo\\' => array($vendorDir . '/catfan/medoo/src'),
     'Mark\\' => array($vendorDir . '/mark-php/mark/src'),
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
 );

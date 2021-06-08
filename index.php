@@ -1,14 +1,45 @@
 <?php
-define("MIRESEH");
+define("MIRESEH", true);
 
-require "utils/number.php";
-require "utils/money.php";
-require "utils/body.php";
+$serviceHeaders = [
+    "Content-Type" => "application/json; charset=utf-8",
+    "Access-Control-Allow-Origin"=> "*",
+    "Access-Control-Allow-Methods"=>"GET, POST, OPTIONS, PUT, DELETE",
+    "Allow"=>"GET, POST, OPTIONS, PUT, DELETE",
+    "Access-Control-Allow-Headers: sessionID, authID, Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method",
+];
+
+require 'vendor/autoload.php';
 
 use Mark\App;
 use Workerman\Protocols\Http\Response;
 
-require 'vendor/autoload.php';
+use Medoo\Medoo;
+
+use Jchook\Uuid;
+ 
+// Connect the database.
+// PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused
+// $database = new Medoo([
+//     'type' => 'mysql',
+//     'host' => 'mireseh.ir',
+//     'database' => 'mireseh2',
+//     'username' => 'root',
+//     'password' => 'erfan$$'
+// ]);
+$database = new Medoo([
+    "type" => "mysql",
+    "host" => "localhost",
+    "database" => "mireseh",
+    "username" => "root",
+    "password" => "01",
+    "prefix" => ""
+]);
+
+
+require "utiles/number.php";
+require "utiles/money.php";
+require "utiles/body.php";
 
 $api = new App('http://0.0.0.0:3003');
 
@@ -32,13 +63,15 @@ $api->get('/hello/{name}[/]', function ($request, $name) {
     $data = [
         "name"=>"Hello $name!",
     ];
-    return new Response(200, ["Content-Type" => "application/json; charset=utf-8"], json_encode($data));
+    return new Response(200, ["Content-Type" => "application/json; charset=utf-8"], encode($data));
 });
 
 $api->post('/user/create', function ($request) {
-    return json_encode(['code'=>0 ,'message' => 'ok']);
+    return encode(['code'=>0 ,'message' => 'ok']);
 });
 
-require "guest.php";
+require "routes/sign-in.php";
+require "routes/verification.php";
+require "routes/guest.php";
 
 $api->start();

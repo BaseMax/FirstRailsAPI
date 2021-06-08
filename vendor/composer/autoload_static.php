@@ -8,6 +8,7 @@ class ComposerStaticInitd76292d16c4ae5007edd58a4e0d0475d
 {
     public static $files = array (
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
+        '07c73caa8502e6e2361eb1681edf27c6' => __DIR__ . '/..' . '/jchook/uuid/lib/Uuid.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -17,6 +18,7 @@ class ComposerStaticInitd76292d16c4ae5007edd58a4e0d0475d
         ),
         'M' => 
         array (
+            'Medoo\\' => 6,
             'Mark\\' => 5,
         ),
         'F' => 
@@ -29,6 +31,10 @@ class ComposerStaticInitd76292d16c4ae5007edd58a4e0d0475d
         'Workerman\\' => 
         array (
             0 => __DIR__ . '/..' . '/workerman/workerman',
+        ),
+        'Medoo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/catfan/medoo/src',
         ),
         'Mark\\' => 
         array (
