@@ -18,22 +18,13 @@ use Medoo\Medoo;
 
 use Jchook\Uuid;
  
-// Connect the database.
-// PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused
-// $database = new Medoo([
-//     'type' => 'mysql',
-//     'host' => 'mireseh.ir',
-//     'database' => 'mireseh2',
-//     'username' => 'root',
-//     'password' => 'erfan$$'
-// ]);
 $database = new Medoo([
     "type" => "mysql",
     "host" => "localhost",
     "database" => "mireseh",
     "username" => "root",
     "password" => "01",
-    "prefix" => ""
+    // "prefix" => ""
 ]);
 
 

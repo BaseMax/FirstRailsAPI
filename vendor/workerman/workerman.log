@@ -247,3 +247,17 @@
 2021-06-08 00:59:27 pid:1150164 Workerman[index.php] stopping ...
 2021-06-08 00:59:27 pid:1150164 Workerman[index.php] has been stopped
 2021-06-08 00:59:28 pid:1150220 Workerman[index.php] start in DEBUG mode
+2021-06-08 18:23:19 pid:1150220 Workerman[index.php] stopping ...
+2021-06-08 18:23:19 pid:1150220 Workerman[index.php] has been stopped
+2021-06-08 22:49:27 pid:1395423 Workerman[index.php] start in DAEMON mode
+2021-06-08 22:57:40 pid:1397392 Workerman[index.php] restart 
+2021-06-08 22:57:40 pid:1397392 Workerman[index.php] is stopping ...
+2021-06-08 22:57:40 pid:1395425 Workerman[index.php] stopping ...
+2021-06-08 22:57:40 pid:1395425 worker[none:1395428] exit with status 65280
+2021-06-08 22:57:40 pid:1395425 worker[none:1395426] exit with status 65280
+2021-06-08 22:57:40 pid:1395425 worker[none:1395427] exit with status 65280
+2021-06-08 22:57:40 pid:1395425 worker[none:1395429] exit with status 65280
+2021-06-08 22:57:40 pid:1395425 Workerman[index.php] has been stopped
+2021-06-08 22:57:40 pid:1397392 Workerman[index.php] stop success
+2021-06-08 23:11:50 pid:1397392 Workerman[index.php] stopping ...
+2021-06-08 23:11:50 pid:1397392 Workerman[index.php] has been stopped
