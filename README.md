@@ -13,3 +13,16 @@ Things you may want to cover:
 
 * Database initialization: `rails db:seed`
 
+
+## Routes
+
+```
+GET /api/v1/articles/
+GET /api/v1/articles/:id/
+POST /api/v1/articles/
+PUT /api/v1/articles/
+PATCH /api/v1/articles/
+DELETE /api/v1/articles/
+```
+
+© Copyright 2021, Max Base
