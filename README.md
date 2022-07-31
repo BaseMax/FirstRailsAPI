@@ -1,4 +1,4 @@
-# First Roby on Rails RESTful API
+# First Ruby on Rails RESTful API
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
